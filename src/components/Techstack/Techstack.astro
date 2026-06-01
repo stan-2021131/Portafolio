@@ -12,6 +12,20 @@ const categories = Object.keys(grouped) as Category[];
 ---
 
 <section class="techstack-section" id="stack">
+  <div class="section-header">
+    <span class="section-tag">TECH STACK</span>
+
+    <h2 class="section-title">
+      Technologies I use to build reliable software solutions.
+    </h2>
+
+    <p class="section-description">
+      A collection of languages, frameworks, databases, and tools that I use
+      across personal, academic, and professional projects. Hover over any
+      technology to learn how I typically use it.
+    </p>
+  </div>
+
   <div class="techstack-grid">
     {
       categories.map((category) => (
@@ -23,21 +37,105 @@ const categories = Object.keys(grouped) as Category[];
 
 <style>
   .techstack-section {
-    display: flex;
-    justify-content: center;
-    margin: 5vh 10vh;
-    padding: 1rem 4rem;
+    position: relative;
+
+    margin: 10vh 20vh;
+
+    padding: 4rem 2rem 2rem;
+
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 24px;
+
+    background: rgba(255, 255, 255, 0.02);
+
+    backdrop-filter: blur(10px);
+  }
+
+  .section-header {
+    position: absolute;
+
+    top: -1.5rem;
+    left: 2rem;
+
+    padding: 0 1rem;
+
+    background: transparent;
+
+    max-width: 900px;
+  }
+
+  .section-tag {
+    display: block;
+
+    color: var(--color-accent);
+
+    font-size: 0.875rem;
+    font-weight: 600;
+
+    letter-spacing: 0.15em;
+
+    margin-bottom: 0.5rem;
+  }
+
+  .section-title {
+    font-size: clamp(1.5rem, 4vw, 2rem);
+
+    font-weight: 700;
+
+    line-height: 1.2;
+
+    margin-bottom: 0.75rem;
+  }
+
+  .section-description {
+    max-width: 65ch;
+
+    color: var(--color-text-muted);
+
+    line-height: 1.7;
   }
 
   .techstack-grid {
+    margin-top: 6rem;
+    padding-top: 2rem;
+
     width: 100%;
+
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 1rem;
+
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+
+    gap: 1.5rem;
+
     align-items: start;
+
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+  }
+  @media (max-width: 1024px) {
+    .techstack-section {
+      margin: 6rem 2rem;
+    }
+
+    .techstack-grid {
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    }
   }
 
   @media (max-width: 768px) {
+    .techstack-section {
+      margin: 4rem 1rem;
+
+      padding: 3rem 1.5rem 1.5rem;
+    }
+
+    .section-header {
+      left: 1.5rem;
+    }
+
+    .section-tag {
+      font-size: 0.75rem;
+    }
+
     .techstack-grid {
       grid-template-columns: 1fr;
     }
