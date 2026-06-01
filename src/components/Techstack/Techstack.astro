@@ -1,0 +1,45 @@
+---
+import { groupTechnologies } from "../../data/tecnologias";
+import CategoryCard from "./CategoryCard.astro";
+import type { Category, Technology } from "../../types/tecnologia";
+
+const { technologies } = Astro.props as {
+  technologies: Technology[];
+};
+
+const grouped = groupTechnologies(technologies);
+const categories = Object.keys(grouped) as Category[];
+---
+
+<section class="techstack-section" id="stack">
+  <div class="techstack-grid">
+    {
+      categories.map((category) => (
+        <CategoryCard category={category} technologies={grouped[category]} />
+      ))
+    }
+  </div>
+</section>
+
+<style>
+  .techstack-section {
+    display: flex;
+    justify-content: center;
+    margin: 5vh 10vh;
+    padding: 1rem 4rem;
+  }
+
+  .techstack-grid {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    align-items: start;
+  }
+
+  @media (max-width: 768px) {
+    .techstack-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>
