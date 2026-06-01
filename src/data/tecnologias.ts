@@ -17,7 +17,7 @@ export const technologies: Technology[] = [
     color: "#3C873A",
     description:
       "Used to build REST APIs, backend services, and web applications. Its ecosystem and flexibility make it one of my preferred backend platforms.",
-    position: { x: 10, y: 30 },
+    position: { x: 3, y: 30 },
   },
   {
     id: "express",
@@ -28,7 +28,7 @@ export const technologies: Technology[] = [
     color: "#ffffff",
     description:
       "My preferred Node.js framework for API development. It provides a simple and maintainable foundation for backend applications.",
-    position: { x: 35, y: 45 },
+    position: { x: 5, y: 73 },
   },
   {
     id: "typescript",
@@ -39,7 +39,7 @@ export const technologies: Technology[] = [
     color: "#3178C6",
     description:
       "One of my most-used languages. I use it in both frontend and backend projects to improve maintainability, readability, and type safety.",
-    position: { x: 60, y: 20 },
+    position: { x: 45, y: 15 },
   },
   {
     id: "javascript",
@@ -50,7 +50,7 @@ export const technologies: Technology[] = [
     color: "#F7DF1E",
     description:
       "The foundation of modern web development. I use it to build interactive user interfaces and dynamic web applications.",
-    position: { x: 15, y: 25 },
+    position: { x: 15, y: 30 },
   },
   {
     id: "python",
@@ -61,7 +61,7 @@ export const technologies: Technology[] = [
     color: "#3776AB",
     description:
       "Used for scripting, automation, lightweight APIs, and data-related tasks. Its simplicity and versatility make it a valuable tool.",
-    position: { x: 15, y: 70 },
+    position: { x: 35, y: 85 },
   },
   {
     id: "java",
@@ -72,7 +72,7 @@ export const technologies: Technology[] = [
     color: "#ED8B00",
     description:
       "The language that helped me understand object-oriented programming fundamentals. I use it for desktop applications and backend development.",
-    position: { x: 65, y: 60 },
+    position: { x: 50, y: 60 },
   },
   {
     id: "spring-boot",
@@ -83,7 +83,7 @@ export const technologies: Technology[] = [
     color: "#6DB33F",
     description:
       "Used to develop Java-based backend services and REST APIs. It introduced me to enterprise application architecture and dependency injection.",
-    position: { x: 40, y: 10 },
+    position: { x: 40, y: 45 },
   },
   {
     id: "postgresql",
@@ -105,7 +105,7 @@ export const technologies: Technology[] = [
     color: "#00758F",
     description:
       "The first relational database system I used. It remains a solid choice for small and medium-sized business applications.",
-    position: { x: 55, y: 50 },
+    position: { x: 50, y: 50 },
   },
   {
     id: "mongodb",
@@ -127,7 +127,7 @@ export const technologies: Technology[] = [
     color: "#008CC1",
     description:
       "Graph database used in a recommendation engine project where relationships and weighted connections played a key role.",
-    position: { x: 60, y: 15 },
+    position: { x: 40, y: 15 },
   },
   {
     id: "react",
@@ -138,7 +138,7 @@ export const technologies: Technology[] = [
     color: "#61DAFB",
     description:
       "Component-based frontend library used in most of my academic and personal projects. Its reusable architecture makes development more efficient.",
-    position: { x: 55, y: 60 },
+    position: { x: 55, y: 70 },
   },
   {
     id: "astro",
@@ -149,7 +149,7 @@ export const technologies: Technology[] = [
     color: "#FF5D01",
     description:
       "Used to build fast, content-focused websites with minimal JavaScript and excellent performance.",
-    position: { x: 10, y: 10 },
+    position: { x: 40, y: 15 },
   },
   {
     id: "html",
@@ -160,7 +160,7 @@ export const technologies: Technology[] = [
     color: "#E34F26",
     description:
       "The standard markup language of the web. Essential for creating accessible and well-structured user interfaces.",
-    position: { x: 65, y: 35 },
+    position: { x: 60, y: 43 },
   },
   {
     id: "css",
@@ -171,7 +171,7 @@ export const technologies: Technology[] = [
     color: "#1572B6",
     description:
       "The standard styling language of the web. I often prefer writing custom CSS for flexibility and fine-grained control.",
-    position: { x: 15, y: 75 },
+    position: { x: 15, y: 85 },
   },
   {
     id: "bootstrap",
@@ -182,7 +182,7 @@ export const technologies: Technology[] = [
     color: "#7952B3",
     description:
       "Useful for quickly building interfaces and prototypes, although I prefer more customized solutions for larger projects.",
-    position: { x: 40, y: 45 },
+    position: { x: 7, y: 55 },
   },
   {
     id: "kotlin",
@@ -204,7 +204,7 @@ export const technologies: Technology[] = [
     color: "#2496ED",
     description:
       "Used in most of my projects to create reproducible environments, simplify deployments, and improve portability.",
-    position: { x: 15, y: 20 },
+    position: { x: 35, y: 27 },
   },
   {
     id: "git",
@@ -226,7 +226,7 @@ export const technologies: Technology[] = [
     color: "#ffffff",
     description:
       "Platform where I manage repositories, collaborate on projects, and maintain public portfolios and documentation.",
-    position: { x: 10, y: 65 },
+    position: { x: 10, y: 70 },
   },
   {
     id: "google-cloud",
@@ -237,7 +237,7 @@ export const technologies: Technology[] = [
     color: "#4285F4",
     description:
       "Cloud platform used to deploy and host web applications and services in real-world environments.",
-    position: { x: 65, y: 15 },
+    position: { x: 5, y: 15 },
   },
   {
     id: "cloudflare",
@@ -248,7 +248,7 @@ export const technologies: Technology[] = [
     color: "#F38020",
     description:
       "Used for DNS management, traffic optimization, and adding security layers to deployed applications.",
-    position: { x: 35, y: 40 },
+    position: { x: 10, y: 40 },
   },
   {
     id: "linux",
@@ -259,7 +259,7 @@ export const technologies: Technology[] = [
     color: "#E95420",
     description:
       "Operating system I use for server administration, development environments, and deployment workflows.",
-    position: { x: 60, y: 75 },
+    position: { x: 30, y: 85 },
   },
 ];
 
