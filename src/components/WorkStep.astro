@@ -1,0 +1,43 @@
+---
+import { Icon } from "astro-icon/components";
+
+const { icon, title } = Astro.props;
+---
+
+<div class="work-step">
+  <div class="step-icon">
+    <Icon name={icon} />
+  </div>
+
+  <p>{title}</p>
+</div>
+
+<style>
+  .work-step {
+    position: relative;
+
+    width: 180px;
+
+    text-align: center;
+  }
+
+  .work-step:not(:last-child)::after {
+    content: "";
+
+    position: absolute;
+
+    top: 24px;
+    left: calc(100% + 10px);
+
+    width: 60px;
+    height: 2px;
+
+    background: var(--color-accent);
+  }
+
+  .work-step:hover {
+    transform: translateY(-8px);
+
+    border-color: var(--color-accent);
+  }
+</style>
