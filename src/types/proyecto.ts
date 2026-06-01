@@ -5,6 +5,6 @@ export type Project = {
   image: string;
   keyContribution: string;
   github: string;
-  demo: string;
+  demo?: string;
   technologiesUsed: string[];
 };
