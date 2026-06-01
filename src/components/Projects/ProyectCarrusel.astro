@@ -1,0 +1,16 @@
+---
+import type { Project } from "../../types/proyecto";
+import ProjectCard from "./ProjectCard.astro";
+import { Icon } from "astro-icon/components";
+const { projects } = Astro.props as { projects: Project[] };
+---
+
+<div class="project-carrusel">
+  <Icon name="arrow-left" class="project-arrow" />
+
+  <div class="project-track">
+    {projects.map((project) => <ProjectCard {...project} />)}
+  </div>
+
+  <Icon name="arrow-right" class="project-arrow" />
+</div>

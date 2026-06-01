@@ -1,0 +1,47 @@
+---
+import type { Project } from "../../types/proyecto";
+import TechnologyTag from "../Techstack/TechnologyTag.astro";
+
+const {
+  title = "",
+  description = "",
+  image = "",
+  keyContribution = "",
+  github = "",
+  demo = "",
+  technologiesUsed = [],
+} = Astro.props as Project;
+---
+
+<div class="card">
+  <div class="image-container">
+    <img src={image} alt={title} class="cardimage" />
+  </div>
+  <div class="card-content">
+    <h2 class="card-title">{title}</h2>
+    <p class="card-description">{description}</p>
+
+    <div class="card-contribution">
+      <span class="card-contribution-title">Key Contribution</span>
+      <p class="card-contribution-description">{keyContribution}</p>
+    </div>
+
+    <div class="card-tags">
+      {
+        technologiesUsed.map((tech) => (
+          <TechnologyTag
+            id={tech.id}
+            name={tech.name}
+            icon={tech.icon}
+            description={tech.description}
+            color={tech.color}
+          />
+        ))
+      }
+    </div>
+    <div class="card-buttons">
+      <a href={demo} class="btn-primary">Ver proyecto</a>
+      <a href={github} class="btn-secondary">Ver en GitHub</a>
+    </div>
+  </div>
+</div>
