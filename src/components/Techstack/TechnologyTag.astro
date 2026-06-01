@@ -1,14 +1,111 @@
 ---
 import { Icon } from "astro-icon/components";
-const { id, name, icon, category, level, description, color } = Astro.props;
+
+const { id, name, icon, description, color } = Astro.props;
 ---
 
-<div class="techtag" id={id}>
+<div class="techtag" id={id} style={`--tech-color: ${color};`}>
   <div class="techtag-header">
     <Icon name={icon} class="techtag-icon" />
-    <h3 class="primary-text">{name}</h3>
+    <span class="primary-text">{name}</span>
   </div>
+
   <div class="techtag-details">
-    <p class="description">{description}</p>
+    <p>{description}</p>
   </div>
 </div>
+
+<style>
+  .techtag {
+    position: relative;
+
+    max-width: 180px;
+
+    padding: 0.75rem 1rem;
+
+    border-radius: 999px;
+
+    border: 1px solid color-mix(in srgb, var(--tech-color) 40%, transparent);
+
+    background: color-mix(in srgb, var(--tech-color) 10%, transparent);
+
+    backdrop-filter: blur(10px);
+
+    cursor: pointer;
+
+    overflow: hidden;
+
+    transition:
+      max-width 0.75s cubic-bezier(0.22, 1, 0.36, 1),
+      transform 0.6s cubic-bezier(0.22, 1, 0.36, 1),
+      box-shadow 0.6s cubic-bezier(0.22, 1, 0.36, 1),
+      border-color 0.6s cubic-bezier(0.22, 1, 0.36, 1),
+      border-radius 0.6s cubic-bezier(0.22, 1, 0.36, 1),
+      background 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+  }
+
+  .techtag-header {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+  }
+
+  .techtag-icon {
+    font-size: 1.3rem;
+    color: var(--tech-color);
+
+    flex-shrink: 0;
+  }
+
+  .primary-text {
+    font-size: 0.95rem;
+    font-weight: 600;
+
+    white-space: nowrap;
+  }
+
+  .techtag-details {
+    max-height: 0;
+
+    opacity: 0;
+
+    overflow: hidden;
+
+    transition:
+      max-height 0.8s cubic-bezier(0.22, 1, 0.36, 1),
+      opacity 0.45s ease 0.2s,
+      margin-top 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+  }
+
+  .techtag-details p {
+    font-size: 0.85rem;
+    line-height: 1.6;
+
+    color: var(--color-text-muted);
+  }
+
+  .techtag:hover {
+    max-width: 420px;
+
+    transform: translateY(-6px) scale(1.04);
+
+    border-radius: 20px;
+
+    border-color: color-mix(in srgb, var(--tech-color) 70%, transparent);
+
+    background: color-mix(in srgb, var(--tech-color) 15%, transparent);
+
+    box-shadow:
+      0 0 0 1px color-mix(in srgb, var(--tech-color) 30%, transparent),
+      0 0 25px color-mix(in srgb, var(--tech-color) 20%, transparent),
+      0 16px 40px rgba(0, 0, 0, 0.35);
+  }
+
+  .techtag:hover .techtag-details {
+    max-height: 300px;
+
+    opacity: 1;
+
+    margin-top: 1rem;
+  }
+</style>
