@@ -1,0 +1,14 @@
+---
+import { Icon } from "astro-icon/components";
+const { id, name, icon, category, level, description, color } = Astro.props;
+---
+
+<div class="techtag" id={id}>
+  <div class="techtag-header">
+    <Icon name={icon} class="techtag-icon" />
+    <h3 class="primary-text">{name}</h3>
+  </div>
+  <div class="techtag-details">
+    <p class="description">{description}</p>
+  </div>
+</div>
