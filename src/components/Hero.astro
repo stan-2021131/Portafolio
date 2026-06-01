@@ -1,0 +1,65 @@
+<div class="hero-container" id="home">
+  <div class="hero-content">
+    <h4>GUATEMALA • COMPUTER SCIENCE STUDENT</h4>
+    <h1 class="hero-name">Sergio Tan</h1>
+    <h2>Backend-Focused Full Stack Developer</h2>
+
+    <p>Building software that removes friction from people's everyday work.</p>
+
+    <div class="buttons">
+      <a href="#" class="btn-primary">Download CV</a>
+      <a href="#" class="btn-secondary">View Projects</a>
+    </div>
+  </div>
+  <div class="hero-visual"></div>
+</div>
+
+<style>
+  .hero-container {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    max-width: var(--content-max-width);
+    padding-left: 8rem;
+
+    position: relative;
+    z-index: 1;
+  }
+
+  .hero-content {
+    position: relative;
+
+    z-index: 2;
+  }
+
+  .hero-name {
+    font-size: clamp(4rem, 10vw, 8rem);
+
+    line-height: 1;
+
+    margin: 0;
+  }
+
+  .hero-visual {
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 100vw;
+    height: 100vh;
+
+    background-image: url("../assets/backgroundhero.jpg");
+    background-size: cover; /* llena toda la pantalla */
+    background-position: center;
+    background-repeat: no-repeat;
+
+    opacity: 0.12;
+    filter: grayscale(20%) blur(0.5px);
+
+    z-index: -1;
+    pointer-events: none;
+  }
+</style>
