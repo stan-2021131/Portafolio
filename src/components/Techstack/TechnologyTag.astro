@@ -17,6 +17,7 @@ const { id, name, icon, description, color, style = "" } = Astro.props;
 
 <style>
   .techtag {
+    z-index: 1;
     position: absolute;
 
     max-width: 180px;
@@ -52,7 +53,7 @@ const { id, name, icon, description, color, style = "" } = Astro.props;
 
   .techtag-icon {
     font-size: 1.3rem;
-    color: var(--tech-color);
+    color: var(--color-text-muted);
 
     flex-shrink: 0;
   }
@@ -85,8 +86,9 @@ const { id, name, icon, description, color, style = "" } = Astro.props;
   }
 
   .techtag:hover {
-    z-index: 999;
+    z-index: 100;
     max-width: 420px;
+    color: var(--color-text);
 
     transform: translateY(-6px) scale(1.04);
 
@@ -94,7 +96,7 @@ const { id, name, icon, description, color, style = "" } = Astro.props;
 
     border-color: color-mix(in srgb, var(--tech-color) 70%, transparent);
 
-    background: color-mix(in srgb, var(--tech-color) 15%, transparent);
+    background: color-mix(in srgb, var(--tech-color) 18%, #111 82%);
 
     box-shadow:
       0 0 0 1px color-mix(in srgb, var(--tech-color) 30%, transparent),
@@ -104,6 +106,7 @@ const { id, name, icon, description, color, style = "" } = Astro.props;
 
   .techtag:hover .techtag-details {
     max-height: 300px;
+    color: var(--color-text);
 
     opacity: 1;
 
