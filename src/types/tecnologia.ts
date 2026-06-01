@@ -15,6 +15,7 @@ interface Technology {
   level: Level;
   color: string;
   description: string;
+  position: { x: number; y: number };
 }
 
 export type { Category, Level };
