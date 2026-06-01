@@ -1,0 +1,146 @@
+---
+import type { Project } from "../../types/proyecto";
+import ProjectCard from "./ProjectCard.astro";
+import { Icon } from "astro-icon/components";
+
+const { projects } = Astro.props as { projects: Project[] };
+---
+
+<div class="project-carousel">
+  <button class="project-arrow prev" aria-label="Previous">
+    <Icon name="mdi:arrow-left" />
+  </button>
+
+  <div class="project-track" id="project-track">
+    {
+      projects.map((project) => (
+        <div class="project-slide">
+          <ProjectCard {...project} />
+        </div>
+      ))
+    }
+  </div>
+
+  <button class="project-arrow next" aria-label="Next">
+    <Icon name="mdi:arrow-right" />
+  </button>
+</div>
+
+<script>
+  const track = document.getElementById("project-track");
+
+  const next = document.querySelector<HTMLButtonElement>(".next");
+  const prev = document.querySelector<HTMLButtonElement>(".prev");
+
+  function getScrollAmount() {
+    const slide = track?.querySelector(".project-slide");
+    if (!slide) return 0;
+    return slide.getBoundingClientRect().width;
+  }
+
+  next?.addEventListener("click", () => {
+    if (!track) return;
+    track.scrollBy({
+      left: getScrollAmount(),
+      behavior: "smooth",
+    });
+  });
+
+  prev?.addEventListener("click", () => {
+    if (!track) return;
+    track.scrollBy({
+      left: -getScrollAmount(),
+      behavior: "smooth",
+    });
+  });
+</script>
+
+<style>
+  .project-carousel {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    gap: 1rem;
+    align-items: center;
+    width: 100%;
+  }
+
+  .project-track {
+    display: flex;
+    gap: 1.5rem;
+
+    overflow-x: auto;
+    overflow-y: visible;
+
+    scroll-behavior: smooth;
+    scroll-snap-type: x mandatory;
+
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+
+    padding: 1rem;
+  }
+
+  .project-track::-webkit-scrollbar {
+    display: none;
+  }
+
+  .project-slide {
+    flex: 0 0 calc(50% - 0.75rem);
+
+    scroll-snap-align: start;
+    scroll-snap-stop: always;
+  }
+
+  .project-arrow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 52px;
+    height: 52px;
+
+    border: none;
+    border-radius: 50%;
+
+    background: rgba(255, 255, 255, 0.04);
+
+    color: var(--color-text-muted);
+
+    cursor: pointer;
+
+    backdrop-filter: blur(10px);
+
+    transition:
+      transform 0.2s ease,
+      background 0.2s ease,
+      color 0.2s ease;
+  }
+
+  .project-arrow:hover {
+    transform: scale(1.08);
+
+    color: var(--color-accent);
+
+    background: rgba(255, 255, 255, 0.08);
+  }
+
+  .project-arrow :global(svg) {
+    font-size: 1.5rem;
+  }
+
+  @media (max-width: 768px) {
+    .project-slide {
+      flex-basis: 100%;
+    }
+
+    .project-carousel {
+      grid-template-columns: 40px 1fr 40px;
+      gap: 0.5rem;
+    }
+
+    .project-arrow {
+      width: 40px;
+      height: 40px;
+    }
+  }
+</style>
