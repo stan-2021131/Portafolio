@@ -1,0 +1,169 @@
+<section class="about-section" id="about">
+  <div class="section-header">
+    <h2 class="section-tag">ABOUT ME</h2>
+    <h3 class="section-title">Building software with purpose.</h3>
+  </div>
+
+  <div class="about-grid">
+    <div class="about-main">
+      <div class="about-block">
+        <h3>My Story</h3>
+        <p>
+          I am a 21-year-old software developer from Guatemala and a Computer
+          Science student with a strong interest in building technology that
+          makes people's lives easier.
+          <br />
+          <br />
+          My interest in software started through video games. I was always curious
+          about how things worked behind the scenes, which eventually led me to choose
+          a programming-oriented path during high school. As I learned more about
+          software development, I realized it was a way to help people solve problems
+          and simplify their daily work, even as someone who naturally prefers working
+          behind the scenes.
+          <br />
+          <br />
+          While I enjoy working across the full stack, backend development is where
+          I feel most comfortable. I enjoy designing business logic, building APIs,
+          developing backend services, and automating repetitive processes. I find
+          it rewarding to transform complex requirements into systems that are reliable,
+          maintainable, and easy to use.
+        </p>
+      </div>
+
+      <div class="about-block">
+        <h3>Future Goals</h3>
+        <p>
+          Looking ahead, I would like to specialize in cybersecurity. I believe
+          software should not only be functional and user-friendly but also
+          secure enough to earn the trust of the people who use it.
+        </p>
+      </div>
+    </div>
+
+    <aside class="about-kpis">
+      <div class="kpi-card">
+        <h3>6+</h3>
+        <span>Years Programming</span>
+      </div>
+
+      <div class="kpi-card">
+        <h3>7+</h3>
+        <span>Languages Explored</span>
+      </div>
+
+      <div class="kpi-card">
+        <h3>10+</h3>
+        <span>Projects Built</span>
+      </div>
+
+      <div class="kpi-card">
+        <h3>Focused</h3>
+        <span>Backend Developer</span>
+      </div>
+
+      <div class="kpi-card">
+        <h3>Interested</h3>
+        <span>Cybersecurity</span>
+      </div>
+    </aside>
+  </div>
+</section>
+
+<style>
+  .about-section {
+    position: relative;
+
+    min-height: 100vh;
+
+    margin: 10vh 20vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    padding: 6rem 4rem 4rem;
+
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 24px;
+
+    background: rgba(255, 255, 255, 0.02);
+    backdrop-filter: blur(10px);
+  }
+
+  .section-header {
+    position: absolute;
+
+    top: -1.5rem;
+    left: 2rem;
+
+    padding: 0 1rem;
+
+    background: transparent;
+  }
+
+  .section-tag {
+    color: var(--color-accent);
+
+    font-size: 1rem;
+    letter-spacing: 0.15em;
+
+    margin-bottom: 0.25rem;
+  }
+
+  .section-title {
+    font-size: 2rem;
+    font-weight: 700;
+  }
+
+  .about-grid {
+    display: grid;
+
+    grid-template-columns: 2fr 1fr;
+
+    gap: 4rem;
+  }
+
+  .about-main {
+    display: flex;
+    flex-direction: column;
+
+    gap: 3rem;
+  }
+
+  .about-block {
+    display: flex;
+    flex-direction: column;
+
+    gap: 1rem;
+  }
+
+  .about-kpis {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .kpi-card {
+    padding: 1.5rem;
+
+    border-radius: var(--radius-md);
+
+    background: var(--color-surface);
+
+    border: 1px solid transparent;
+
+    transition:
+      transform var(--transition-fast),
+      border-color var(--transition-fast),
+      box-shadow var(--transition-fast);
+  }
+
+  .kpi-card:hover {
+    transform: translateX(8px);
+
+    border-color: var(--color-accent);
+
+    box-shadow:
+      0 0 0 1px rgba(212, 165, 199, 0.2),
+      0 12px 32px rgba(0, 0, 0, 0.3);
+  }
+</style>

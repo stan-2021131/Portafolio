@@ -1,6 +1,6 @@
 :root {
   /* Colors */
-  --color-bg: #0f0f0f;
+  --color-bg: #0D0D0D;
   --color-surface: #18181b;
 
   --color-text: #f4f4f5;
@@ -21,6 +21,7 @@
 
   /* Shadows */
   --shadow-soft: 0 8px 24px rgba(0, 0, 0, 0.15);
+  --shadow-accent: 0 4px 20px var(--color-accent);
 
   /* Typography */
   --font-body: "Inter", system-ui, sans-serif;
