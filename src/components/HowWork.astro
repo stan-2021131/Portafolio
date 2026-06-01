@@ -1,0 +1,84 @@
+---
+import WorkStep from "./WorkStep.astro";
+---
+
+<section class="workflow">
+  <div class="workflow-header">
+    <h2 class="workflow-tag">HOW I WORK</h2>
+    <h3 class="workflow-title">Building software with purpose.</h3>
+  </div>
+
+  <WorkStep icon="mdi:magnify" title="Understand the problem" />
+
+  <WorkStep icon="mdi:alert-outline" title="Identify edge cases" />
+
+  <WorkStep icon="mdi:cog-outline" title="Build a simple solution" />
+
+  <WorkStep icon="mdi:rocket-launch-outline" title="Refine and improve" />
+
+  <WorkStep icon="mdi:brain" title="Technical decisions" />
+</section>
+
+<style>
+  .workflow {
+    position: relative;
+    margin: 10vh 20vh;
+    max-width: 1400px;
+    padding: 4rem 2rem 2rem;
+
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 24px;
+    background: rgba(255, 255, 255, 0.02);
+    backdrop-filter: blur(10px);
+  }
+
+  .workflow-header {
+    position: absolute;
+    top: -1.5rem;
+    left: 2rem;
+    padding: 0 1rem;
+    background-color: transparent;
+  }
+
+  .workflow-tag {
+    color: var(--color-accent);
+    font-size: 0.875rem;
+    font-weight: 600;
+    letter-spacing: 0.15em;
+    margin-bottom: 0.5rem;
+  }
+
+  .workflow-title {
+    font-size: clamp(1.5rem, 4vw, 2rem);
+    font-weight: 700;
+    line-height: 1.2;
+  }
+
+  @media (max-width: 1024px) {
+    .workflow {
+      margin: 6rem 2rem;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    }
+  }
+
+  @media (max-width: 768px) {
+    .workflow {
+      margin: 4rem 1rem;
+      padding: 3rem 1.5rem 1.5rem;
+      gap: 1.5rem;
+      grid-template-columns: 1fr;
+    }
+
+    .workflow-header {
+      left: 1.5rem;
+    }
+
+    .workflow-tag {
+      font-size: 0.75rem;
+    }
+  }
+</style>
