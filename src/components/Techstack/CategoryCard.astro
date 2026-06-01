@@ -1,0 +1,71 @@
+---
+import TechnologyTag from "./TechnologyTag.astro";
+import type { Technology, Category } from "../../types/tecnologia";
+
+const { category, technologies } = Astro.props as {
+  category: Category;
+  technologies: Technology[];
+};
+
+const positions = (() => {
+  const placed: { x: number; y: number }[] = [];
+  const tagWidth = 20;
+  const tagHeight = 12;
+
+  const checkCollision = (x: number, y: number) => {
+    return placed.some(
+      (pos) =>
+        Math.abs(pos.x - x) < tagWidth && Math.abs(pos.y - y) < tagHeight,
+    );
+  };
+
+  return technologies.map(() => {
+    let x,
+      y,
+      attempts = 0;
+    do {
+      x = Math.random() * (100 - tagWidth);
+      y = Math.random() * (100 - tagHeight);
+      attempts++;
+    } while (checkCollision(x, y) && attempts < 50);
+
+    placed.push({ x, y });
+    return { left: `${x}%`, top: `${y}%` };
+  });
+})();
+---
+
+<div class="category-card" id={category}>
+  <h2 class="category-title">{category}</h2>
+  <div class="category-content">
+    {
+      technologies.map((technology, index) => (
+        <TechnologyTag
+          {...technology}
+          style={`left:${positions[index].left};
+          top:${positions[index].top};`}
+        />
+      ))
+    }
+  </div>
+</div>
+
+<style>
+  .category-card {
+    position: relative;
+
+    min-height: 500px;
+
+    border-radius: 24px;
+
+    background: rgba(255, 255, 255, 0.02);
+
+    overflow: visible;
+  }
+
+  .category-content {
+    position: relative;
+
+    height: 500px;
+  }
+</style>
