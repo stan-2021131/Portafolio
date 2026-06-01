@@ -32,7 +32,8 @@ import SidebarLink from "./SidebarLink.astro";
     top: 50%;
     transform: translateY(-50%);
 
-    width: 64px;
+    width: var(--sidebar-width-collapsed);
+    height: 100%;
 
     display: flex;
     flex-direction: column;
@@ -43,14 +44,14 @@ import SidebarLink from "./SidebarLink.astro";
     overflow: hidden;
 
     transition:
-      width 0.3s ease,
-      background-color 0.3s ease;
+      width var(--transition-normal),
+      background-color var(--transition-normal);
 
     z-index: 100;
   }
 
   .sidebar-container:hover {
-    width: 240px;
+    width: var(--sidebar-width-expanded);
 
     background: rgba(255, 255, 255, 0.05);
 
@@ -67,7 +68,7 @@ import SidebarLink from "./SidebarLink.astro";
     font-size: 1.5rem;
     font-weight: 700;
 
-    transition: opacity 0.3s ease;
+    transition: var(--transition-normal);
   }
 
   .sidebar-container:hover .sidebar-title {
