@@ -1,0 +1,55 @@
+---
+import { Icon } from "astro-icon/components";
+
+const { href, icon, label } = Astro.props;
+---
+
+<a href={href} class="sidebar-link">
+  <Icon name={icon} />
+  <span>{label}</span>
+</a>
+
+<style>
+  .sidebar-link {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+
+    padding: 0.75rem;
+
+    border-radius: 10px;
+
+    color: white;
+    text-decoration: none;
+
+    white-space: nowrap;
+
+    transition:
+      transform 0.2s ease,
+      background-color 0.2s ease;
+  }
+
+  .sidebar-link:hover {
+    transform: translateX(4px);
+
+    background: rgba(255, 255, 255, 0.08);
+  }
+
+  .sidebar-link span {
+    max-width: 0;
+
+    opacity: 0;
+
+    overflow: hidden;
+
+    transition:
+      max-width 0.3s ease,
+      opacity 0.3s ease;
+  }
+
+  :global(.sidebar-container:hover .sidebar-link span) {
+    max-width: 150px;
+
+    opacity: 1;
+  }
+</style>

@@ -1,0 +1,90 @@
+---
+import SidebarLink from "./SidebarLink.astro";
+---
+
+<div class="sidebar-container">
+  <div class="sidebar-title">
+    Sergio
+    <br />
+    Tan
+  </div>
+
+  <nav class="sidebar-links">
+    <SidebarLink href="#home" label="Home" icon="mdi:home" />
+    <SidebarLink href="#about" label="About" icon="mdi:user" />
+    <SidebarLink href="#stack" label="Stack" icon="mdi:code" />
+    <SidebarLink href="#projects" label="Projects" icon="mdi:folder" />
+    <SidebarLink href="#contact" label="Contact" icon="mdi:envelope" />
+  </nav>
+
+  <div class="sidebar-social">
+    <SidebarLink href="#" label="LinkedIn" icon="mdi:linkedin" />
+    <SidebarLink href="#" label="GitHub" icon="mdi:github" />
+    <SidebarLink href="#" label="Email" icon="mdi:email" />
+  </div>
+</div>
+
+<style>
+  .sidebar-container {
+    position: fixed;
+
+    left: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+
+    width: 64px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+
+    padding: 1rem;
+
+    overflow: hidden;
+
+    transition:
+      width 0.3s ease,
+      background-color 0.3s ease;
+
+    z-index: 100;
+  }
+
+  .sidebar-container:hover {
+    width: 240px;
+
+    background: rgba(255, 255, 255, 0.05);
+
+    backdrop-filter: blur(10px);
+
+    border-radius: 16px;
+  }
+
+  .sidebar-title {
+    opacity: 0;
+
+    white-space: nowrap;
+
+    font-size: 1.5rem;
+    font-weight: 700;
+
+    transition: opacity 0.3s ease;
+  }
+
+  .sidebar-container:hover .sidebar-title {
+    opacity: 1;
+  }
+
+  .sidebar-links {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .sidebar-social {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+
+    margin-top: auto;
+  }
+</style>
