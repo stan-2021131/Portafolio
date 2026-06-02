@@ -63,9 +63,8 @@ const projectTechnologies = technologiesUsed
 <style>
   .card {
     display: flex;
+    flex-direction: column;
     gap: 2rem;
-
-    height: 100%;
 
     padding: 1.5rem;
 
@@ -95,11 +94,8 @@ const projectTechnologies = technologiesUsed
   }
   .image-container {
     flex-shrink: 0;
-
-    width: 280px;
-    height: 100%;
-
-    min-height: 220px;
+    width: 100%;
+    height: 180px;
 
     border-radius: 18px;
 
@@ -133,7 +129,7 @@ const projectTechnologies = technologiesUsed
   .card-title {
     margin-bottom: 0.75rem;
 
-    font-size: 1.75rem;
+    font-size: 1.25rem;
     font-weight: 700;
 
     line-height: 1.1;
@@ -144,7 +140,7 @@ const projectTechnologies = technologiesUsed
 
     color: var(--color-text-muted);
 
-    line-height: 1.7;
+    line-height: 1.4;
   }
 
   .card-contribution {
@@ -162,7 +158,7 @@ const projectTechnologies = technologiesUsed
 
     color: var(--color-accent);
 
-    font-size: 0.8rem;
+    font-size: 0.9rem;
     font-weight: 700;
 
     letter-spacing: 0.12em;
@@ -173,7 +169,7 @@ const projectTechnologies = technologiesUsed
   .card-contribution-description {
     color: var(--color-text-muted);
 
-    line-height: 1.7;
+    line-height: 1.4;
   }
 
   .card-tags {
@@ -195,10 +191,6 @@ const projectTechnologies = technologiesUsed
   }
 
   @media (max-width: 900px) {
-    .card {
-      flex-direction: column;
-    }
-
     .image-container {
       width: 100%;
       height: 220px;
