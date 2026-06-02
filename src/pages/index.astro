@@ -4,6 +4,7 @@ import About from "../components/About.astro";
 import Layout from "../layouts/Layout.astro";
 import HowWork from "../components/HowWork.astro";
 import Techstack from "../components/Techstack/Techstack.astro";
+import Projects from "../components/Projects/Projects.astro";
 import { technologies } from "../data/tecnologias";
 ---
 
@@ -12,4 +13,5 @@ import { technologies } from "../data/tecnologias";
   <About />
   <HowWork />
   <Techstack technologies={technologies} />
+  <Projects />
 </Layout>
