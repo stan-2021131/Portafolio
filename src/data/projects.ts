@@ -9,14 +9,14 @@ export const projects: Project[] = [
     description:
       "A platform designed to help university students exchange materials, offer services, find tutors, and connect with peers through a community-driven marketplace.",
 
-    image: "/projects/swap.png",
+    image: "src/assets/swap.png",
 
     keyContribution:
       "Designed and implemented recommendation systems, user-tag relationships, authentication flows, and scalable backend APIs. Developed content discovery features using Jaccard similarity to personalize recommendations based on student activity and interests.",
 
-    github: "",
+    github: "https://github.com/her24770/swap-backend",
 
-    demo: "",
+    demo: "https://swap.jhgo.online/es",
 
     technologiesUsed: [
       "typescript",
@@ -36,14 +36,14 @@ export const projects: Project[] = [
     description:
       "A full-stack inventory management system designed to explore real-world software development practices, including role-based access control, API design, containerization, and production deployment.",
 
-    image: "/projects/inventory-manager.png",
+    image: "src/assets/inventario.png",
 
     keyContribution:
       "Built the entire application from scratch, including backend APIs, database modeling, role-based access control, React frontend, Dockerized infrastructure, server deployment, Cloudflare integration, and domain configuration.",
 
-    github: "",
+    github: "https://github.com/stan-2021131/BD1_Project2",
 
-    demo: "",
+    demo: "https://inventario.sergiotan.online/",
 
     technologiesUsed: [
       "typescript",
@@ -63,14 +63,14 @@ export const projects: Project[] = [
     description:
       "A performance-focused developer portfolio designed to showcase projects, technical decision-making, and software engineering experience through a modern and maintainable architecture.",
 
-    image: "/projects/portfolio.png",
+    image: "src/assets/portafolio.png",
 
     keyContribution:
       "Designed and implemented the complete component architecture, responsive layouts, reusable UI system, and technology showcase while leveraging Astro's island architecture and performance-first philosophy.",
 
-    github: "",
+    github: "https://github.com/stan-2021131/Portafolio",
 
-    demo: "",
+    demo: "https://portafolio.sergiotan.online/",
 
     technologiesUsed: ["astro", "typescript", "html", "css"],
   },
@@ -83,12 +83,12 @@ export const projects: Project[] = [
     description:
       "A graph-based recommendation platform that matches students with university degree programs based on interests, skills, and academic preferences.",
 
-    image: "/projects/career-recommender.png",
+    image: "src/assets/recomendaciones.jpeg",
 
     keyContribution:
       "Designed graph relationships in Neo4j, implemented recommendation logic, and integrated FastAPI services with a React frontend to explore real-world graph database applications.",
 
-    github: "",
+    github: "https://github.com/stan-2021131/Proyecto-2-Algoritmos",
 
     demo: "",
 
