@@ -1,4 +1,5 @@
 ---
+import { Image } from "astro:assets";
 import type { Project } from "../../types/proyecto";
 import { technologies } from "../../data/tecnologias";
 import ProjectTag from "./ProjectTag.astro";
@@ -7,7 +8,7 @@ const {
   id = "",
   title = "",
   description = "",
-  image = "",
+  image,
   keyContribution = "",
   github = "",
   demo = "",
@@ -23,7 +24,7 @@ const projectTechnologies = technologiesUsed
 
 <div class="card">
   <div class="image-container">
-    <img src={image} alt={title} class="cardimage" />
+    <Image src={image} alt={title} class="cardimage" />
   </div>
   <div class="card-content">
     <h2 class="card-title">{title}</h2>
