@@ -1,0 +1,154 @@
+<div class="looking-container" id="home">
+  <div class="looking-content">
+    <span>LOOKING AHEAD</span>
+
+    <h2>
+      Building a better future through technology, one solution at a time.
+    </h2>
+
+    <p>
+      I want to continue growing as a software engineer and deepen my
+      understanding of how reliable systems are designed, built, and secured.
+      Most of the work I enjoy happens behind the scenes. Users may never see
+      the APIs, infrastructure, security layers, or business logic that power an
+      application, but when everything works seamlessly, that is exactly the
+      point. As I continue my journey, I am particularly interested in
+      cybersecurity and backend systems. I believe software should not only be
+      functional and easy to use, but also trustworthy enough for people to rely
+      on it with confidence.
+    </p>
+  </div>
+
+  <div class="looking-visual"></div>
+</div>
+
+<style>
+  .looking-container {
+    position: relative;
+
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+
+    min-height: 80vh;
+
+    padding: 4rem;
+
+    background: rgba(255, 255, 255, 0.02);
+    backdrop-filter: blur(10px);
+
+    overflow: hidden;
+  }
+
+  .looking-content {
+    position: relative;
+    z-index: 2;
+
+    max-width: 700px;
+
+    margin-left: auto;
+
+    text-align: left;
+  }
+
+  .looking-content h4 {
+    margin-bottom: 1rem;
+
+    color: var(--color-accent);
+
+    font-size: 0.875rem;
+    font-weight: 700;
+
+    letter-spacing: 0.15em;
+  }
+
+  .looking-content p {
+    margin-bottom: 2rem;
+
+    color: var(--color-text-muted);
+
+    line-height: 1.9;
+
+    max-width: 60ch;
+  }
+
+  .looking-content h2 {
+    max-width: 14ch;
+
+    font-size: clamp(2.5rem, 5vw, 4.5rem);
+    font-weight: 800;
+
+    line-height: 1.05;
+  }
+
+  .looking-visual {
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 100vw;
+    height: 100vh;
+
+    background-image: url("../assets/backgroundhero.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    transform: scaleX(-1);
+
+    opacity: 0.12;
+
+    filter: grayscale(20%) blur(1px);
+
+    z-index: -1;
+  }
+
+  .looking-container::after {
+    content: "";
+
+    position: absolute;
+    inset: 0;
+
+    background: linear-gradient(
+      90deg,
+      rgba(8, 8, 8, 0.15) 0%,
+      rgba(8, 8, 8, 0.65) 40%,
+      rgba(8, 8, 8, 0.9) 100%
+    );
+
+    z-index: 1;
+  }
+
+  @media (max-width: 1024px) {
+    .looking-container {
+      margin: 6rem 2rem;
+      padding: 3rem;
+    }
+
+    .looking-content h2 {
+      max-width: none;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .looking-container {
+      margin: 4rem 1rem;
+      padding: 2rem;
+
+      min-height: auto;
+    }
+
+    .looking-content {
+      max-width: 100%;
+    }
+
+    .looking-content h2 {
+      font-size: clamp(2rem, 8vw, 3rem);
+    }
+
+    .looking-visual {
+      opacity: 0.2;
+    }
+  }
+</style>
