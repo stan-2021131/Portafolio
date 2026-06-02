@@ -38,8 +38,7 @@ export const projects: Project[] = [
     title: "Inventory Manager",
 
     description:
-      "A full-stack inventory management system designed to explore real-world software development practices, including role-based access control, API design, containerization, and production deployment.",
-
+      "A full-stack inventory management system designed to explore real-world software development practices, including role-based access control, API design, containerization, UI component documentation with Storybook, testing critical frontend logic with Vitest, and production deployment.",
     image: inventoryImage,
 
     keyContribution:
@@ -56,6 +55,8 @@ export const projects: Project[] = [
       "react",
       "postgresql",
       "docker",
+      "vitest",
+      "storybook",
     ],
   },
 
