@@ -80,4 +80,42 @@
 
     z-index: 1;
   }
+
+  .buttons {
+    display: flex;
+    gap: 1rem;
+    margin-top: 2rem;
+  }
+
+  @media (max-width: 1024px) {
+    .hero-container {
+      padding-left: 7rem;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .hero-container {
+      padding: 0 2rem 0 6rem;
+    }
+
+    .hero-visual {
+      width: 100%;
+      height: 100%;
+      background-position: 75% center;
+    }
+
+    .buttons {
+      flex-direction: column;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .hero-container {
+      padding: 0 1.5rem 0 5rem;
+    }
+
+    .hero-visual {
+      background-position: 75% center;
+    }
+  }
 </style>
