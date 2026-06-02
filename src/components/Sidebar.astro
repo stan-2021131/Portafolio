@@ -2,102 +2,182 @@
 import SidebarLink from "./SidebarLink.astro";
 ---
 
-<div class="sidebar-container">
-  <div class="sidebar-title">
-    Sergio
-    <br />
-    Tan
-  </div>
+<div class="sidebar-wrapper">
+  <button class="menu-toggle" aria-label="Abrir menú" id="menu-toggle">
+    ☰
+  </button>
 
-  <nav class="sidebar-links">
-    <SidebarLink href="#home" label="Home" icon="mdi:home" />
-    <SidebarLink href="#about" label="About" icon="mdi:user" />
-    <SidebarLink href="#stack" label="Stack" icon="mdi:code" />
-    <SidebarLink href="#projects" label="Projects" icon="mdi:folder" />
-    <SidebarLink href="#looking-ahead" label="Looking ahead" icon="mdi:book" />
-  </nav>
+  <aside class="sidebar-container" id="sidebar">
+    <div class="sidebar-title"></div>
 
-  <div class="sidebar-social">
-    <SidebarLink
-      href="https://www.linkedin.com/in/sergio-tan/"
-      label="LinkedIn"
-      icon="mdi:linkedin"
-    />
-    <SidebarLink
-      href="https://github.com/stan-2021131"
-      label="GitHub"
-      icon="mdi:github"
-    />
-    <SidebarLink
-      href="mailto:sergiocoromac@gmail.com"
-      label="Email"
-      icon="mdi:email"
-    />
-  </div>
+    <nav class="sidebar-links">
+      <SidebarLink href="#home" label="Home" icon="mdi:home" />
+      <SidebarLink href="#about" label="About" icon="mdi:user" />
+      <SidebarLink href="#stack" label="Stack" icon="mdi:code" />
+      <SidebarLink href="#projects" label="Projects" icon="mdi:folder" />
+      <SidebarLink
+        href="#looking-ahead"
+        label="Looking ahead"
+        icon="mdi:book"
+      />
+    </nav>
+
+    <div class="sidebar-social">
+      <SidebarLink
+        href="https://www.linkedin.com/in/sergio-tan/"
+        label="LinkedIn"
+        icon="mdi:linkedin"
+      />
+      <SidebarLink
+        href="https://github.com/stan-2021131"
+        label="GitHub"
+        icon="mdi:github"
+      />
+      <SidebarLink
+        href="mailto:sergiocoromac@gmail.com"
+        label="Email"
+        icon="mdi:email"
+      />
+    </div>
+  </aside>
 </div>
+
+<script>
+  const toggle = document.getElementById("menu-toggle");
+  const sidebar = document.getElementById("sidebar");
+  const links = sidebar?.querySelectorAll("a");
+
+  toggle?.addEventListener("click", () => {
+    sidebar?.classList.toggle("open");
+  });
+
+  links?.forEach((link) => {
+    link.addEventListener("click", () => {
+      sidebar?.classList.remove("open");
+    });
+  });
+</script>
 
 <style>
   .sidebar-container {
     position: fixed;
-
-    left: 1rem;
     top: 50%;
+    left: 1rem;
     transform: translateY(-50%);
 
-    width: var(--sidebar-width-collapsed);
-    height: 100%;
+    width: 80px;
+    height: auto;
+    min-height: 80vh;
+
+    padding: 1rem;
 
     display: flex;
     flex-direction: column;
     gap: 2rem;
 
-    padding: 1rem;
+    border-radius: 24px;
+
+    backdrop-filter: blur(16px);
+
+    box-shadow:
+      0 8px 32px rgba(0, 0, 0, 0.15),
+      inset 0 1px 0 rgba(255, 255, 255, 0.05);
 
     overflow: hidden;
 
-    transition:
-      width var(--transition-normal),
-      background-color var(--transition-normal);
+    transition: all 0.3s ease;
 
     z-index: 100;
   }
 
   .sidebar-container:hover {
-    width: var(--sidebar-width-expanded);
-
-    background: rgba(255, 255, 255, 0.05);
-
-    backdrop-filter: blur(10px);
-
-    border-radius: 16px;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    width: 260px;
   }
 
   .sidebar-title {
     opacity: 0;
-
-    white-space: nowrap;
+    transform: translateX(-10px);
 
     font-size: 1.5rem;
     font-weight: 700;
+    line-height: 1.1;
 
-    transition: var(--transition-normal);
+    transition: all 0.3s ease;
   }
 
   .sidebar-container:hover .sidebar-title {
     opacity: 1;
+    transform: translateX(0);
   }
 
-  .sidebar-links {
+  .sidebar-links,
+  .sidebar-social {
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
   }
 
   .sidebar-social {
-    display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
-
     margin-top: auto;
+  }
+
+  .menu-toggle {
+    display: none;
+
+    position: fixed;
+    top: 1rem;
+    left: 1rem;
+
+    width: 48px;
+    height: 48px;
+
+    border: none;
+    border-radius: 12px;
+
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(12px);
+
+    color: white;
+    font-size: 1.4rem;
+
+    cursor: pointer;
+
+    z-index: 200;
+  }
+  @media (max-width: 768px) {
+    .menu-toggle {
+      display: grid;
+      place-items: center;
+    }
+
+    .sidebar-container {
+      top: 0;
+      left: 0;
+
+      width: 280px;
+      height: 100vh;
+
+      min-height: unset;
+
+      transform: translateX(-100%);
+
+      border-radius: 0 24px 24px 0;
+
+      transition: transform 0.3s ease;
+    }
+
+    .sidebar-container:hover {
+      width: 280px;
+    }
+
+    .sidebar-container.open {
+      transform: translateX(0);
+    }
+
+    .sidebar-title {
+      opacity: 1;
+      transform: none;
+    }
   }
 </style>

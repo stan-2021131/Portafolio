@@ -54,7 +54,8 @@ const { href, icon, label } = Astro.props;
     flex-shrink: 0;
   }
 
-  :global(.sidebar-container:hover .sidebar-link span) {
+  :global(.sidebar-container:hover .sidebar-link span),
+  :global(.sidebar-container.open .sidebar-link span) {
     max-width: 150px;
 
     opacity: 1;
