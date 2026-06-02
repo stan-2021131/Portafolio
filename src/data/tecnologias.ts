@@ -28,7 +28,7 @@ export const technologies: Technology[] = [
     color: "#ffffff",
     description:
       "My preferred Node.js framework for API development. It provides a simple and maintainable foundation for backend applications.",
-    position: { x: 5, y: 73 },
+    position: { x: 25, y: 67 },
   },
   {
     id: "typescript",
@@ -50,7 +50,7 @@ export const technologies: Technology[] = [
     color: "#F7DF1E",
     description:
       "The foundation of modern web development. I use it to build interactive user interfaces and dynamic web applications.",
-    position: { x: 15, y: 30 },
+    position: { x: 10, y: 20 },
   },
   {
     id: "python",
@@ -61,7 +61,29 @@ export const technologies: Technology[] = [
     color: "#3776AB",
     description:
       "Used for scripting, automation, lightweight APIs, and data-related tasks. Its simplicity and versatility make it a valuable tool.",
-    position: { x: 35, y: 85 },
+    position: { x: 5, y: 80 },
+  },
+  {
+    id: "vitest",
+    name: "Vitest",
+    icon: "logos:vitest",
+    category: "Frontend",
+    level: 2,
+    color: "#6E9F18",
+    description:
+      "Used for unit testing critical frontend functions and business logic, providing confidence in key user flows and reducing regressions.",
+    position: { x: 5, y: 81 },
+  },
+  {
+    id: "storybook",
+    name: "Storybook",
+    icon: "logos:storybook-icon",
+    category: "Frontend",
+    level: 3,
+    color: "#FF4785",
+    description:
+      "Used to build, document, and validate reusable UI components in isolation, improving consistency across the application.",
+    position: { x: 35, y: 70 },
   },
   {
     id: "java",
@@ -72,7 +94,7 @@ export const technologies: Technology[] = [
     color: "#ED8B00",
     description:
       "The language that helped me understand object-oriented programming fundamentals. I use it for desktop applications and backend development.",
-    position: { x: 50, y: 60 },
+    position: { x: 5, y: 55 },
   },
   {
     id: "spring-boot",
@@ -83,7 +105,7 @@ export const technologies: Technology[] = [
     color: "#6DB33F",
     description:
       "Used to develop Java-based backend services and REST APIs. It introduced me to enterprise application architecture and dependency injection.",
-    position: { x: 40, y: 45 },
+    position: { x: 40, y: 43 },
   },
   {
     id: "postgresql",
@@ -138,7 +160,7 @@ export const technologies: Technology[] = [
     color: "#61DAFB",
     description:
       "Component-based frontend library used in most of my academic and personal projects. Its reusable architecture makes development more efficient.",
-    position: { x: 55, y: 70 },
+    position: { x: 55, y: 53 },
   },
   {
     id: "astro",
@@ -149,7 +171,7 @@ export const technologies: Technology[] = [
     color: "#FF5D01",
     description:
       "Used to build fast, content-focused websites with minimal JavaScript and excellent performance.",
-    position: { x: 40, y: 15 },
+    position: { x: 40, y: 10 },
   },
   {
     id: "html",
@@ -160,7 +182,7 @@ export const technologies: Technology[] = [
     color: "#E34F26",
     description:
       "The standard markup language of the web. Essential for creating accessible and well-structured user interfaces.",
-    position: { x: 60, y: 43 },
+    position: { x: 55, y: 30 },
   },
   {
     id: "css",
@@ -171,7 +193,7 @@ export const technologies: Technology[] = [
     color: "#1572B6",
     description:
       "The standard styling language of the web. I often prefer writing custom CSS for flexibility and fine-grained control.",
-    position: { x: 15, y: 85 },
+    position: { x: 5, y: 60 },
   },
   {
     id: "bootstrap",
@@ -182,7 +204,7 @@ export const technologies: Technology[] = [
     color: "#7952B3",
     description:
       "Useful for quickly building interfaces and prototypes, although I prefer more customized solutions for larger projects.",
-    position: { x: 7, y: 55 },
+    position: { x: 7, y: 43 },
   },
   {
     id: "kotlin",
