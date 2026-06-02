@@ -113,7 +113,7 @@ const categories = Object.keys(grouped) as Category[];
   }
   @media (max-width: 1024px) {
     .techstack-section {
-      margin: 6rem 2rem;
+      margin: 6rem 1rem 0 7rem;
     }
 
     .techstack-grid {
@@ -137,7 +137,19 @@ const categories = Object.keys(grouped) as Category[];
     }
 
     .techstack-grid {
+      margin-top: 10rem;
       grid-template-columns: 1fr;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .techstack-section {
+      margin: 4rem 0.5rem;
+      padding: 3rem 1rem 1rem;
+    }
+
+    .section-header {
+      left: 1rem;
     }
   }
 </style>
