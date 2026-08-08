@@ -46,7 +46,7 @@ export const projects: Project[] = [
 
     github: "https://github.com/stan-2021131/BD1_Project2",
 
-    demo: "https://inventario.sergiotan.online/",
+    demo: "",
 
     technologiesUsed: [
       "typescript",
